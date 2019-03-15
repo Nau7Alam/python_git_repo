@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working on Users Security</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	
+</head>
+<body>
+<nav>
+	<ul>
+		<li><a href="{% url 'basicapp:index'%}">Index</a></li>
+		<li><a href="{% url 'basicapp:register'%}">Register</a></li>
+		
+		{% if user.is_authenticated %}
+		<li><a href="{% url 'basicapp:user_logout' %}">Logout</a></li>
+		{% else %}
+		
+		<li><a href="{% url 'basicapp:user_login' %}">Login</a></li>
+		
+		{% endif %}
+	</ul>
+	{% block body_block %}
+	
+	{% endblock %}
+	
+</nav>
+	
+</body>
+</html>

@@ -1,0 +1,13 @@
+nav{
+	padding: 10px;
+	background-color: #ae9292;
+	font-weight: bolder;
+	
+}
+nav a{
+	text-decoration: none;
+	color: #b3be35;
+}
+ul li {
+	display: inline-block;
+}
